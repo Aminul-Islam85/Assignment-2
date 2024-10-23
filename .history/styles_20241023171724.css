@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1 rem 2 rem;
     background-color: transparent;
 }
 
@@ -55,7 +55,7 @@ body {
 
 /*responsiveness*/
 
-@media (max-width: 768px) {
+@media (max-width: 768) {
     .nav-links {
         display: none;
     }
@@ -69,11 +69,11 @@ body {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #121212;
+        background-color: #12121212;
         width: 100%;
         height: auto;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1rem;
     }
     .nav-links li {
         margin: 1rem 0;
@@ -99,20 +99,20 @@ body {
     margin-bottom: 1rem;
 }
 
-.hero .highlighted {
+.hero.highlighted {
     font-style: italic;
     font-weight: 700;
     color: #ff5e00;
 }
 
-.hero p {
+hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: irem;
 }
 
 .cta-btn {
@@ -123,7 +123,7 @@ body {
     cursor: pointer;
 }
 
-.join-btn {
+.join.btn {
     background-color: #ff5e00;
     color: #fff;
 }
@@ -132,7 +132,6 @@ body {
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    
 }
 
 .hero-image img {
@@ -263,7 +262,7 @@ body {
 .extra-mile-content {
     max-width: 50%;
 }
-.extra-mile h2 {
+extra-mile h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -393,7 +392,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #2e2e2e;
+    background-color: #121212;
     padding: 2rem;
     border-radius: 20px;
 }
@@ -418,11 +417,11 @@ footer {
 .bmi-form {
     flex: 1;
 }
-.bmi-form h3 {
+bmi-form h3 {
     color: #fff;
     margin-bottom: 1rem;
 }
-.bmi-form p {
+bmi-form p {
     margin-bottom: 2rem;
     color: #aaa;
 }
@@ -438,14 +437,14 @@ footer {
 .bmi-form select {
     cursor: pointer;
 }
-.bmi-form .calculate-btn {
-    background-color: #ff5e00;
-    color: white;
-    border: none;
+.bmi-form, .calculate-btn {
+    width: 100%;
     padding: 1rem 2rem;
     border-radius: 5px;
+    border: none;
+    background-color: #ff5e00;
+    color: white;
     cursor: pointer;
-    width: 100%;      
     text-align: center;
 }
 
