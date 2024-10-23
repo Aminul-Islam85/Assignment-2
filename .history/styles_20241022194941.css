@@ -1,0 +1,32 @@
+/*Global Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #fff;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1 rem 2 rem;
+    background-color: transparent;
+}
+
+.heading-text {
+    font-size: 1.5rem;
+    color: #ff5e00;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}

@@ -1,0 +1,514 @@
+/*Global Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #fff;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1 rem 2 rem;
+    background-color: transparent;
+}
+
+.heading-text {
+    font-size: 1.5rem;
+    color: #ff5e00;
+}
+
+/*nav-link hidden in moble*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/*Hamburger menu hidden in desktop*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/*responsiveness*/
+
+@media (max-width: 768) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    /*hamburger clicked show nav-links*/
+    .navbar.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #12121212;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
+
+/* Hero section*/
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #121212;
+    position: relative;
+}
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero.highlighted {
+    font-style: italic;
+    font-weight: 700;
+    color: #ff5e00;
+}
+
+hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: irem;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join.btn {
+    background-color: #ff5e00;
+    color: #fff;
+}
+
+.download-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Info Cards*/
+.info-card {
+    position: absolute;
+    background-color: #2e2e2e;
+    color: white;
+    border-radius: 8px;
+    padding: 1re 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.workout-card {
+    top: 30%;
+    right: 10%;
+}
+
+.tutorial-card {
+    top: 60%;
+    left: 55%;
+}
+
+/*Hero reponsive for mobile*/
+@media (max-width: 768px) {
+.hero {
+    flex-direction: column;
+    text-align: center;
+}
+.hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+.info-card {
+    font-size: 1rem;
+    padding: 0.75rem 1 rem;
+    position: relative;
+    margin: 1rem auto;
+    width: auto;
+}
+.workout-card, .tutorial-card {
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-bottom: 1rem;
+ }
+}
+
+/*Hero Buttons on mobile*/
+@media (max-width:480px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .cta-btn {
+        width: 100%;
+    }
+}
+
+/*Change habit section*/
+.habits {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #121212;
+}
+
+.habits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.habits p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.habits-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.habit-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.habit-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.habit-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.habit-item p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/*Extra mile section*/
+.extra-mile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e2e;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin: 4rem 0;
+}
+
+.extra-mile-content {
+    max-width: 50%;
+}
+extra-mile h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.extra-mile p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.extra-mile btn {
+    background-color: #ff5e00;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.extra-mile image img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+/*Footer*/
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+/*responsive design*/
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .extra-mile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .extra-mile-content, .extra-mile-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Trainings and Exercise*/
+.trainings-exercises {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #121212;
+}
+
+.trainings-exercises h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.trainings-exercises p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #aaa;
+}
+.exercise-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.exercise-item {
+    position: relative;
+}
+.exercise-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.exercise-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+.exercise-item:hover .exercise-overlay {
+    opacity: 1;
+}
+.exercise-overlay p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*BMI*/
+.bmi-calculator {
+    background-color: #121212;
+    padding: 4rem 2rem;
+}
+.bmi-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.bmi-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.bmi-title p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/*calculator*/
+.bmi-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #121212;
+    padding: 2rem;
+    border-radius: 20px;
+}
+.bmi-chart {
+    flex: 1;
+    margin-right: 2rem;
+}
+.bmi-chart h3 {
+    color:#fff;
+    margin-bottom: 1rem;
+}
+.bmi-chart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.bmi-chart table th, .bmi-chart table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.bmi-form {
+    flex: 1;
+}
+bmi-form h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+bmi-form p {
+    margin-bottom: 2rem;
+    color: #aaa;
+}
+.bmi-form input, .bmi-form select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+.bmi-form select {
+    cursor: pointer;
+}
+.bmi-form, .calculate-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff5e00;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*responsiveness*/
+@media (max-width: 768px) {
+    .bmi-content {
+        flex-direction: column;
+    }
+    .bmi-chart {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+/*Meet our team*/
+.team-selection {
+    background-color: #121212;
+    padding: 4rem 2rem;
+}
+.team-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.team-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.team-title p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/*Team-content*/
+.team-content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    background-color: #2e2e2e;
+    padding: 2rem;
+    border-radius: 20px;
+}
+.team-member {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.team-member:hover .team-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
